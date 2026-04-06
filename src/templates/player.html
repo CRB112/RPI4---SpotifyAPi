@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Display</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='player.css') }}" />
+</head>
+<body>
+
+    <div class="noise"></div>
+
+    <div class="player" id="player">
+
+        <div class="art-wrapper">
+            <div class="art-glow"></div>
+            <img id="art" src="" alt="Album Art" />
+            <div class="vinyl-ring"></div>
+        </div>
+
+        <div class="info">
+            <p class="label">NOW PLAYING</p>
+            <h1 id="track">Loading...</h1>
+            <h2 id="artist"></h2>
+
+            <div class="progress-block">
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-times">
+                    <span id="time-current">0:00</span>
+                    <span id="time-total">0:00</span>
+                </div>
+            </div>
+
+            <div class="bar-container">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="idle-screen" id="idle-screen">
+        <div class="idle-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <p>Nothing playing right now</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='player.js') }}"></script>
+</body>
+</html>
