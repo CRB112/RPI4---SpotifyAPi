@@ -4,7 +4,7 @@
  * API shape: { playing, track, artist, album_art, progress, duration }
  */
 
-const POLL_MS = 5000;
+const POLL_MS = 2500;
 
 const playerEl      = document.getElementById('player');
 const idleEl        = document.getElementById('idle-screen');
